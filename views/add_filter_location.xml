@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record id="view_add_inventory_filter_location_in_tree" model="ir.ui.view">
+        <field name="name">add.filter.inventory.location.tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="stock.view_stock_product_tree"/>
+        <field name="arch" type="xml">
+      
+       
+         <xpath expr="//field[@name='virtual_available']" position="after">
+                 
+                  <field name="property_stock_production"/> 
+        </xpath>
+          <xpath expr="//field[@name='property_stock_production']" position="attributes">
+                 
+                  <attribute name="string">Ubicacion</attribute> 
+             
+        </xpath>
+        
+        
+        </field>
+
+    </record>
+    
+</odoo>
